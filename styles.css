@@ -340,6 +340,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;     /* prevents any odd edges */
+  line-height: 0;       /* removes baseline spacing */
   transition: background-color var(--transition);
 }
 
@@ -349,10 +351,13 @@ img {
 }
 
 /* For PNG/JPG icons (not SVG) */
-.social-icon-img {
+.social-icon {
   width: 16px;
   height: 16px;
   display: block;
+  object-fit: contain;
+    /* makes all icons look consistent (white glyph) */
+  filter: brightness(0) invert(1);
 }
 
 /* Footer styles */
