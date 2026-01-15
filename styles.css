@@ -1,6 +1,4 @@
 /* styles.css */
-/* Modern normalize reset */
-@import url('https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css');
 
 /* Base styles */
 :root {
@@ -18,13 +16,19 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--text);
   background-color: var(--white-background);
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -45,7 +49,7 @@ img {
 }
 
 .container {
-  width: 1158px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -84,7 +88,7 @@ img {
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -169,7 +173,7 @@ img {
 }
 
 .hero-btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -290,7 +294,7 @@ img {
 .team-item {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--white-background);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -344,10 +348,11 @@ img {
   background-color: var(--pressed-state);
 }
 
-.social-icon {
-  fill: var(--light);
+/* For PNG/JPG icons (not SVG) */
+.social-icon-img {
   width: 16px;
   height: 16px;
+  display: block;
 }
 
 /* Footer styles */
@@ -398,12 +403,8 @@ img {
   gap: 24px;
 }
 
-.subscribe-label {
-  flex-grow: 1;
-}
-
 .subscribe-input {
-  width: 100%;
+  width: 264px;
   height: 40px;
   border: 1px solid var(--white-background);
   background-color: transparent;
@@ -427,7 +428,7 @@ img {
 }
 
 .subscribe-btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -549,8 +550,14 @@ img {
   transition: border-color var(--transition);
 }
 
+/* C3: input focus border */
 .form-input:focus {
   border-color: var(--primary-brand);
+}
+
+/* C3: icon changes when focused */
+.form-input:focus + .form-icon {
+  fill: var(--primary-brand);
 }
 
 .form-label {
@@ -569,10 +576,6 @@ img {
   transform: translateY(-50%);
   fill: var(--dark);
   transition: fill var(--transition);
-}
-
-.form-input:focus + .form-icon {
-  fill: var(--primary-brand);
 }
 
 .form-textarea {
@@ -606,8 +609,10 @@ img {
   color: var(--subtle-text);
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
+/* C5: custom checkbox */
 .agreement-custom {
   width: 16px;
   height: 16px;
@@ -618,17 +623,15 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  transition: background-color var(--transition), border var(--transition), fill var(--transition);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
 }
 
-.agreement-checkbox:checked + .agreement-custom {
+/* show check icon when checked */
+.agreement-checkbox:checked + .agreement-label .agreement-custom {
   background-color: var(--pressed-state);
   border-color: var(--pressed-state);
   fill: var(--light);
-}
-
-.agreement-checkbox:focus + .agreement-custom {
-  border-color: var(--primary-brand);
 }
 
 .form-btn {
@@ -636,7 +639,7 @@ img {
   margin: 0 auto;
   min-width: 169px;
   height: 56px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
