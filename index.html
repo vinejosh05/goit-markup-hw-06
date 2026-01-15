@@ -12,13 +12,11 @@
       rel="stylesheet"
     />
 
-    <!-- A4: normalizer -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
 
-    <!-- A1: one styles file inside css folder -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -38,12 +36,12 @@
               <a class="nav-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="">Contacts</a>
+              <a class="nav-link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
 
-        <address class="address">
+        <address class="address" id="contacts">
           <ul class="address-list list">
             <li class="address-item">
               <a class="address-link link" href="mailto:info@devstudio.com">
@@ -157,7 +155,11 @@
 
             <li class="work-item">
               <div class="work-overlay">
-                <img src="./images/img2.jpg" alt="Mobile app screens" width="360" />
+                <img
+                  src="./images/img2.jpg"
+                  alt="Mobile app screens"
+                  width="360"
+                />
                 <div class="overlay">
                   <p class="overlay-text">
                     Mobile applications that provide seamless user experience
@@ -169,7 +171,11 @@
 
             <li class="work-item">
               <div class="work-overlay">
-                <img src="./images/img3.jpg" alt="Responsive design" width="360" />
+                <img
+                  src="./images/img3.jpg"
+                  alt="Responsive design"
+                  width="360"
+                />
                 <div class="overlay">
                   <p class="overlay-text">
                     Fully responsive designs that adapt perfectly to any screen
@@ -187,7 +193,6 @@
           <h2 class="section-title">Our Team</h2>
 
           <ul class="team-list list">
-            <!-- repeat card x4 (same markup) -->
             <li class="team-item">
               <img
                 src="./images/markguerrero.jpg"
@@ -208,7 +213,7 @@
                       rel="noopener noreferrer"
                     >
                       <img
-                        class="social-icon-img"
+                        class="social-icon"
                         src="./images/instagram.png"
                         alt="Instagram"
                         width="16"
@@ -226,7 +231,7 @@
                       rel="noopener noreferrer"
                     >
                       <img
-                        class="social-icon-img"
+                        class="social-icon"
                         src="./images/x-twitter.png"
                         alt="X (Twitter)"
                         width="16"
@@ -244,7 +249,7 @@
                       rel="noopener noreferrer"
                     >
                       <img
-                        class="social-icon-img"
+                        class="social-icon"
                         src="./images/facebook.png"
                         alt="Facebook"
                         width="16"
@@ -262,7 +267,7 @@
                       rel="noopener noreferrer"
                     >
                       <img
-                        class="social-icon-img"
+                        class="social-icon"
                         src="./images/linkedin.png"
                         alt="LinkedIn"
                         width="16"
@@ -274,8 +279,7 @@
               </div>
             </li>
 
-            <!-- Keep your other 3 team members exactly the same pattern -->
-            <!-- ... -->
+            <!-- other team cards ... -->
           </ul>
         </div>
       </section>
@@ -297,29 +301,79 @@
           <p class="footer-social-title">Social media</p>
           <ul class="social-list list">
             <li class="social-item">
-              <a class="social-link" href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <img class="social-icon-img" src="./images/instagram.png" alt="Instagram" width="16" height="16" />
+              <a
+                class="social-link"
+                href="https://instagram.com"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./images/instagram.png"
+                  alt="Instagram"
+                  width="16"
+                  height="16"
+                />
               </a>
             </li>
+
             <li class="social-item">
-              <a class="social-link" href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                <img class="social-icon" src="./images/x-twitter.png" alt="X (Twitter)" width="16" height="16" />
+              <a
+                class="social-link"
+                href="https://twitter.com"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./images/x-twitter.png"
+                  alt="X (Twitter)"
+                  width="16"
+                  height="16"
+                />
               </a>
             </li>
+
             <li class="social-item">
-              <a class="social-link" href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <img class="social-icon-img" src="./images/facebook.png" alt="Facebook" width="16" height="16" />
+              <a
+                class="social-link"
+                href="https://facebook.com"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./images/facebook.png"
+                  alt="Facebook"
+                  width="16"
+                  height="16"
+                />
               </a>
             </li>
+
             <li class="social-item">
-              <a class="social-link" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <img class="social-icon-img" src="./images/linkedin.png" alt="LinkedIn" width="16" height="16" />
+              <a
+                class="social-link"
+                href="https://linkedin.com"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./images/linkedin.png"
+                  alt="LinkedIn"
+                  width="16"
+                  height="16"
+                />
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- B3: subscription form -->
         <div class="footer-subscribe">
           <p class="footer-subscribe-title">Subscribe</p>
 
@@ -346,7 +400,6 @@
       </div>
     </footer>
 
-    <!-- Modal Window (B4) -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
@@ -416,7 +469,7 @@
             ></textarea>
           </div>
 
-          <!-- C4/C5: hidden checkbox + custom -->
+          <!-- ✅ checkbox structure that matches the CSS selectors -->
           <div class="form-agreement">
             <input
               class="agreement-checkbox visually-hidden"
@@ -433,9 +486,7 @@
                 </svg>
               </span>
 
-              <span class="agreement-text"
-                >I accept the terms and conditions</span
-              >
+              <span class="agreement-text">I accept the terms and conditions</span>
             </label>
           </div>
 
