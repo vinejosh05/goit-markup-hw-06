@@ -352,7 +352,8 @@ img {
 }
 
 /* PNG/JPG icons inside the circle (make all white + consistent) */
-.social-icon {
+.social-icon,
+.social-icon-img {
   width: 16px;
   height: 16px;
   display: block;
