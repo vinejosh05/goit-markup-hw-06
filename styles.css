@@ -13,7 +13,7 @@
 .social-link {
   width: 40px;
   height: 40px;
-  background-color: var(--dark); /* uniform, high contrast */
+  background-color: var(--primary-brand); /* uniform + visible for all icons */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -28,13 +28,13 @@
   background-color: var(--pressed-state);
 }
 
-/* PNG/JPG icons inside the circle */
+/* PNG/JPG icons inside the circle (make all white + consistent) */
 .social-icon {
   width: 16px;
   height: 16px;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* forces icons to white */
+  filter: brightness(0) invert(1);
 }
 
 /* Footer hover color stays special */
@@ -44,24 +44,6 @@
 }
 
 /* ---------- Checkbox fix (matches your HTML) ---------- */
-/* Hide native checkbox (C4) – you already use visually-hidden class.
-   Keep this if your checkbox has visually-hidden, otherwise uncomment below.
-*/
-/*
-.agreement-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-*/
-
 .agreement-label {
   font-size: 12px;
   line-height: 1.17;
@@ -87,16 +69,16 @@
     fill var(--transition);
 }
 
-/* Checked state – THIS selector matches your HTML:
-   <input ...> + <span class="agreement-custom"> ... </span>
+/* ✅ Checked selector that matches your structure:
+   input + label > .agreement-custom
 */
-.agreement-checkbox:checked + .agreement-custom {
+.agreement-checkbox:checked + .agreement-label .agreement-custom {
   background-color: var(--pressed-state);
   border-color: var(--pressed-state);
   fill: var(--light);
 }
 
-/* Focus state */
-.agreement-checkbox:focus + .agreement-custom {
+/* ✅ Focus selector (keyboard tab) */
+.agreement-checkbox:focus + .agreement-label .agreement-custom {
   border-color: var(--primary-brand);
 }
